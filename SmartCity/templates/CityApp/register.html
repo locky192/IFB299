@@ -1,17 +1,34 @@
 <!DOCTYPE html>
+
 {% extends 'CityApp/base.html' %}
+<html>
+
+
+<head>
+ 
+ {% block css_block %}
 {% load staticfiles %}
+<link href="{% static 'CityApp/registration.css' %}" rel="stylesheet">
+{% endblock %}
+	
+  </head>
 {% block title_block %}
-  Register
+  <title>CityApp Registration</title>
 {% endblock %}
 
 {% block body_block %}
-  <h1>About Page</h1>
+  <h1>User Registration</h1>
+  
   {% if registered %}
-      Rango says: <strong>thank you for registering!</strong>
-      <a href="{% url 'index' %}">Return to the homepage.</a><br />
-  {% else %}
-      Rango says: <strong>register here!</strong><br />
+	<form>
+      <strong>Thank you for registering!</strong>
+     <strong> <a href="{% url 'index' %}">Return to the homepage.</a></strong><br />
+	</form>
+  {% else %} 
+    
+      
+	  <div class="form">
+		
       <form id="user_form" method="post" action="{% url 'register' %}"
             enctype="multipart/form-data">
       {% csrf_token %}
@@ -20,7 +37,12 @@
       {{ user_form.as_p }}
       {{ profile_form.as_p }}
       <!-- Provide a button to click to submit the form. -->
-      <input type="submit" name="submit" value="Register" />
+	  <button type="submit" class="submit">Submit</button>
+     
     </form>
+	</div>
+	
+	
     {% endif %}
 {% endblock %}
+</html>

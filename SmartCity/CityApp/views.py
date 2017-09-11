@@ -9,6 +9,12 @@ from CityApp.forms import UserForm, UserProfileForm
 # Create your views here.
 def index(request):
     return render(request, 'CityApp/index.html')
+	
+def user_login(request):
+    return render(request, 'CityApp/user_login.html')
+	
+def admin_login(request):
+    return render(request, 'CityApp/admin_login.html')
 
 def register (request):
     registered = False

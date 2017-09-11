@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
+{% extends 'CityApp/base.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'CityApp/base.css' %}" />
+
 
   <head>
-    <title>CityApp</title>
+  
+	{% block title_block %}
+    <title>CityApp Login</title>
+	{% endblock %}
+	
   </head>
+  
+ 
+  {% block body_block %}
+	<h1>hello</h1>
+  <div class="form">
+    <form>
+            
+      <h1>hello</h1>
+    
+    </form>
+  </div>
 
-  <body>
-    <h1>HomePage</h1>
-
+{% endblock %}
 
 </html>
