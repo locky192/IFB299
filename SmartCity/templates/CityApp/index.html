@@ -1,29 +1,52 @@
 <!DOCTYPE html>
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{% load staticfiles %}  
+
+
+{% block css_block %}
+{% endblock %}
 <html>
-{% extends 'CityApp/base.html' %}
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'CityApp/base.css' %}" />
 
-
-  <head>
-  
+  <head lang="en">
+    <meta charset="UTF-8" />
 	{% block title_block %}
-    <title>CityApp Login</title>
 	{% endblock %}
+    
+	 <nav class="navbar navbar-inverse">
+	 
+		<ul class="navbar-left">			
+			<a class="navbar-brand" href="{% url 'index'%}">Home</a>
+			<a class="navbar-brand" href="{% url 'register'%}">Register</a>			
+		</ul>
+		
+		
+		
+		<ul class="nav navbar-nav navbar-right">		
+			<a class="navbar-brand" href="{% url 'user_login'%}">User Login</a>
+			<a class="navbar-brand" href="{% url 'admin_login'%}">Admin Login</a>			
+			<a class="navbar-brand" href="{% url 'index'%}">Sign Out</a>
+				
+		</ul>
 	
+</nav>
   </head>
   
- 
-  {% block body_block %}
-	<h1>hello</h1>
-  <div class="form">
-    <form>
-            
-      <h1>hello</h1>
+  
+  
+  
+  <body background="../../static/CityApp/images/background.jpg", >
+  
+    <div>
+        {% block body_block %}
+        
+        
+		<h1>Welcome to Smart City</h1>
+		
+  <p>The best guide to Brisbane City since 1905.</p>
+        {% endblock %}
+    </div>
+    <hr />
     
-    </form>
-  </div>
-
-{% endblock %}
-
+  </body>
 </html>
