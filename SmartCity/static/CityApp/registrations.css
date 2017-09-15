@@ -3,11 +3,12 @@
     margin: 0;
     padding: 7.5px 15px;
 }
+
 strong{
 	font-size: 20px;
 }
 form {
-  overflow:hidden;
+  overflow: auto;
   position: relative;
   z-index: 1;
   background: #cccccc;
@@ -43,7 +44,10 @@ button {
 }
 
 
-
+hr {
+    clear: both;
+    visibility: hidden;
+}
 
 
 h1 {
@@ -56,14 +60,10 @@ h1 {
   text-align: center;
 }
 
-hr {
-    clear: both;
-    visibility: hidden;
-}
+
 
 body {
-	
-  overflow:hidden;
+  overflow:auto;
   border-color: #c0b4ab;
   background: #c0b4ab;
   font-family: "PT Sans", sans-serif;

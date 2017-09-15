@@ -10,8 +10,12 @@ class UserProfile (models.Model):
     user = models.OneToOneField(User)
 
     phone_number = models.CharField(blank=True, max_length = 15)
-    #phone_number = models.IntegerField(blank=True)
-    address = models.TextField(blank=True)
+    unit_number = models.CharField(blank=True, max_length = 3)
+    street_number = models.CharField(blank=True, max_length = 3)
+    suburb = models.CharField(blank=True, max_length = 20)
+    state = models.CharField(blank=True, max_length = 20)
+    postcode = models.CharField(blank=True, max_length = 4)
+
     
     website = models.URLField(blank=True)
     picture = models.ImageField(upload_to='profile_images', blank=True)
