@@ -13,7 +13,7 @@ def index(request):
 def login(request):
     return render(request, 'CityApp/login.html')
 
-def admin_login(request):
+def admin_login(request, template_name):
     return render(request, 'CityApp/admin_login.html')
 
 def register (request):

@@ -21,7 +21,9 @@
 
 
 
-  <form method='post'>
+  <form action="/CityApp/admin/login/?next=/CityApp/admin/" method="post" id="login-form">
+
+
     {% csrf_token %}
 
     {{ form.as_p }}
