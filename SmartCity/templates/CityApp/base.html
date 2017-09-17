@@ -10,34 +10,34 @@
     <meta charset="UTF-8" />
 	{% block title_block %}
 	{% endblock %}
-    
+
 	 <nav class="navbar navbar-inverse">
-	 
-		<ul class="navbar-left">			
+
+		<ul class="navbar-left">
 			<a class="navbar-brand" href="{% url 'index'%}">Home</a>
-			<a class="navbar-brand" href="{% url 'register'%}">Register</a>			
+			<a class="navbar-brand" href="{% url 'register'%}">Register</a>
 		</ul>
-		
-		
-		
-		<ul class="nav navbar-nav navbar-right">		
-			<a class="navbar-brand" href="{% url 'user_login'%}">User Login</a>
-			<a class="navbar-brand" href="{% url 'admin_login'%}">Admin Login</a>			
+
+
+
+		<ul class="nav navbar-nav navbar-right">
+			<a class="navbar-brand" href="{% url 'login'%}">User Login</a>
+			<a class="navbar-brand" href="{% url 'admin_login'%}">Admin Login</a>
 			<a class="navbar-brand" href="{% url 'index'%}">Sign Out</a>
-				
+
 		</ul>
-	
+
 </nav>
   </head>
-  
-  
-  
+
+
+
   <body>
     <div>
         {% block body_block %}
         {% endblock %}
     </div>
     <hr />
-    
+
   </body>
 </html>

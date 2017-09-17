@@ -5,12 +5,12 @@
 
 
 <head>
- 
+
  {% block css_block %}
 {% load staticfiles %}
 <link href="{% static 'CityApp/registration.css' %}" rel="stylesheet">
 {% endblock %}
-	
+
   </head>
 {% block title_block %}
   <title>CityApp Registration</title>
@@ -18,12 +18,15 @@
 
 {% block body_block %}
   <h1>User Login</h1>
- 
-  
-    
-  <form>
-  <h1>Login goes here</h1>
+
+
+
+  <form action="" method="post">
+    {% csrf_token %}
+
+      {{ form.as_p }}
+  <!-- <h1>Login goes here</h1> -->
   <button type="submit" class="submit">Login</button>
 	</form>
- 
+
    {% endblock %}
