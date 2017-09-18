@@ -2,4 +2,11 @@
     margin: 0;
     padding: 7.5px 15px;
 }
-<body style="margin: 0;">
+nav{
+font-family: "PT Sans", sans-serif;	
+}
+
+form,body{
+	overflow-x: hidden;
+	overflow-y: auto;
+}

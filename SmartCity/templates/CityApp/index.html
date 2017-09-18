@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-{% load staticfiles %}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-{% load staticfiles %}
-
+{% extends 'CityApp/base.html' %}
 
 {% block css_block %}
+{% load staticfiles %}
+<link href="{% static 'CityApp/index.css' %}" rel="stylesheet">
+<link href="{% static 'CityApp/base.css' %}" rel="stylesheet">
 {% endblock %}
 <html>
 
@@ -13,29 +13,13 @@
 	{% block title_block %}
 	{% endblock %}
 
-	 <nav class="navbar navbar-inverse">
 
-		<ul class="navbar-left">
-			<a class="navbar-brand" href="{% url 'index'%}">Home</a>
-			<a class="navbar-brand" href="{% url 'register'%}">Register</a>
-		</ul>
-
-
-
-		<ul class="nav navbar-nav navbar-right">
-			<a class="navbar-brand" href="{% url 'login'%}">User Login</a>
-			<a class="navbar-brand" href="{% url 'admin_login'%}">Admin Login</a>
-			<a class="navbar-brand" href="{% url 'index'%}">Sign Out</a>
-
-		</ul>
-
-</nav>
   </head>
 
 
 
 
-  <body background="../../static/images/background.gif" >
+  <body>
 
     <div>
         {% block body_block %}
