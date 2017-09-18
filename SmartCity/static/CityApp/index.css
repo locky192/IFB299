@@ -16,22 +16,23 @@ h1 {
   padding: 15px;
   font-size: 80px;
   font-weight: 300;
-  color: #FFFFFF;
+  color: #f2f2f2;
   text-align: center;
 }
-p1 {
-  margin: 0 0 15px;
-  border: 0;
-  padding: 15px;
-  font-size: 20px;
-  font-weight: 300;
-  color: #FFFFFF;
-  text-align: center;
-}
-body {
-background-image: url("../images/background vid.gif");
-font-family: "PT Sans", sans-serif;
-background-repeat: no-repeat;
-background-size: cover;
+
+
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
 }
 
