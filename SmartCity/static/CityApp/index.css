@@ -1,5 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans);
 
+.navbar-nav {
+    margin: 0;
+    padding: 7.5px 15px;
+}
+nav{
+font-family: "PT Sans", sans-serif;	
+}
+
+form,body{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
 
 
 
