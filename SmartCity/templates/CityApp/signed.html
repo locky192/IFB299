@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'CityApp/base.html' %}
+
+{% block css_block %}
+{% load staticfiles %}
+<link href="{% static 'CityApp/index.css' %}" rel="stylesheet">
+<link href="{% static 'CityApp/base.css' %}" rel="stylesheet">
+{% endblock %}
+<html>
+
+  <head lang="en">
+    <meta charset="UTF-8" />
+	{% block title_block %}
+	{% endblock %}
+
+
+  </head>
+
+
+
+
+  
+
+    <div>
+        {% block body_block %}
+<body background="../../static/images/21844051_1778816778798597_1370293286_o.jpg", >
+</body>
+        {% endblock %}
+    </div>
+    <hr />
+
+  
+</html>

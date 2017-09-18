@@ -8,7 +8,13 @@ hr {
     visibility: hidden;
 }
 
-
+body {
+	background-image: url('../images/background.gif');
+	font-family: "PT Sans", sans-serif;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+	
 
 h1 {
   margin: 0 0 15px;
