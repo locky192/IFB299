@@ -10,6 +10,9 @@ from CityApp.forms import UserForm, UserProfileForm
 def index(request):
     return render(request, 'CityApp/index.html')
 
+def signed (request):
+    return render(request, 'CityApp/signed.html')
+
 def login(request):
     return render(request, 'CityApp/login.html')
 

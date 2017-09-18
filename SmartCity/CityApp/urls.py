@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^register/$', views.register,
     name='register'),
+    url(r'^signed/$', views.signed, name='signed'),
 	url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^login/$', auth_views.login, {'template_name': 'CityApp/login.html'}, name='login'),
 	url(r'^admin/login/$', auth_views.login, {'template_name': 'CityApp/admin_login.html'}, name='admin_login'),
