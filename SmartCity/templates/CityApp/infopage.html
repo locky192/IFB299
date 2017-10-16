@@ -1,0 +1,11 @@
+{% load easy_maps_tags %}
+<html>
+  <head></head>
+  <body>
+  <center>
+    {% with 640 as w and 480 as h and 16 as z and "easy_maps/map.html" as t  %}
+      {% easy_map "Brisbane, Queensland " w h z using t %}
+    {% endwith %}
+	</center>
+  </body>
+</html>

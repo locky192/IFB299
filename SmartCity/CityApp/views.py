@@ -19,6 +19,9 @@ def login(request):
 def admin_login(request, template_name):
     return render(request, 'CityApp/admin_login.html')
 
+def info_page(request):
+    return render(request, 'CityApp/infopage.html')
+
 def register (request):
     registered = False
 
