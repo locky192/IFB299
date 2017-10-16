@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+body, form{
+	height:100%
+	
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+
+
+
+
+.list{
+  background: #f2f2f2;
+  list-style:none;
+  position: absolute;
+  width: 20%;
+  padding: 5px;
+  overflow: scroll;
+  
+  padding-bottom: 80px  
+
+  
+}
+
+.map{
+	float:right;
+	width:80%;
+}
+
+li:nth-child(even){
+	
+    background: #cccccc;
+  
+}

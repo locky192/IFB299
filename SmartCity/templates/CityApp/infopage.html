@@ -1,11 +1,107 @@
+<!DOCTYPE html>
+
+{% extends 'CityApp/base.html' %}
 {% load easy_maps_tags %}
 <html>
-  <head></head>
-  <body>
-  <center>
-    {% with 640 as w and 480 as h and 16 as z and "easy_maps/map.html" as t  %}
+
+
+<head>
+ 
+ {% block css_block %}
+{% load staticfiles %}
+<link href="{% static 'CityApp/base.css' %}" rel="stylesheet">
+<link href="{% static 'CityApp/info.css' %}" rel="stylesheet">
+
+
+{% endblock %}
+	
+ {% block body_block %}
+ 
+<section class="section-list">
+  <ul class="list" style="height:100%;overflow:hidden; overflow-y:scroll;">
+    <li>
+      
+      <h3>Place 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+	<li>
+      
+      <h3>Place 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+	<li>
+      
+      <h3>Place 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+	<li>
+      
+      <h3>Place 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+	<li>
+      
+      <h3>Place 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+	<li>
+      
+      <h3>Place 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+      
+    <li>
+      
+      <h3>Place 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+
+    <li>
+      
+      <h3>Place 3</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+
+    <li>
+      
+      <h3>Place 4</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+	<li>
+      
+      <h3>Place 4</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+	<li>
+      
+      <h3>Place 4</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+	<li>
+      
+      <h3>Place 4</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+	<li>
+      
+      <h3>Place 4</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+	<li>
+      
+      <h3>Place 4</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+    </li>
+  </ul>
+  </section>
+  
+  <form class="map">
+	{% with 640 as w and 480 as h and 16 as z and "easy_maps/map.html" as t  %}
       {% easy_map "Brisbane, Queensland " w h z using t %}
     {% endwith %}
-	</center>
-  </body>
+
+  </form>
+{% endblock %}
+
+
 </html>
