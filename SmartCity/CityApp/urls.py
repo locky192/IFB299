@@ -17,5 +17,6 @@ urlpatterns = [
 	url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^login/$', auth_views.login, {'template_name': 'CityApp/login.html'}, name='login'),
 	url(r'^admin/login/$', auth_views.login, {'template_name': 'CityApp/admin_login.html'}, name='admin_login'),
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),url(r'^button/$',views.button, name='button'),
+	url(r'^button_function/$',views.button_function, name= 'button_function'),
 ]

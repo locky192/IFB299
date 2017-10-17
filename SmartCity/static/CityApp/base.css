@@ -1,9 +1,13 @@
 .navbar-nav {
     margin: 0;
-    padding: 7.5px 15px;
+    
 }
 nav{
 font-family: "PT Sans", sans-serif;	
+
+}
+.navbar {
+margin-bottom: 0px;
 }
 
 form,body{

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+{% extends 'CityApp/base.html' %}
+<html>
+
+
+<head>
+
+ {% block css_block %}
+{% load staticfiles %}
+<link href="{% static 'CityApp/base.css' %}" rel="stylesheet">
+{% endblock %}
+
+  </head>
+{% block title_block %}
+  <title>CityApp Registration</title>
+{% endblock %}
+
+{% block body_block %}
+  <h1>Button</h1>
+
+
+
+
+  <a href="{% url 'button_function' %}" class='btn btn-lg'>Button</a>
+  
+	</form>
+
+   {% endblock %}

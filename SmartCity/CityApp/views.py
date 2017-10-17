@@ -5,6 +5,8 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 from CityApp.forms import UserForm, UserProfileForm
+from templates.function import write_func
+
 
 # Create your views here.
 def index(request):
@@ -21,6 +23,13 @@ def admin_login(request, template_name):
 
 def info_page(request):
     return render(request, 'CityApp/infopage.html')
+	
+def button(request):
+	return render(request, 'CityApp/button.html')
+
+def button_function(request):	
+	write_func()
+	return render(request, 'CityApp/button.html', {})
 
 def register (request):
     registered = False
