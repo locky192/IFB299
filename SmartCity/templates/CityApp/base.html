@@ -16,6 +16,7 @@
 		<ul class="navbar-left">
 			<a class="navbar-brand" href="{% url 'index'%}">Home</a>
 			<a class="navbar-brand" href="{% url 'register'%}">Register</a>
+      <a class="navbar-brand">{{request.user.username}} {{request.profile.user_type}}</a>
 		</ul>
 
 

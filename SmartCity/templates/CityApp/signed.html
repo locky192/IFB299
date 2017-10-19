@@ -6,7 +6,7 @@
 
   <head lang="en">
     <meta charset="UTF-8" />
-	
+
 
 	 <nav class="navbar navbar-inverse">
 
@@ -20,6 +20,7 @@
 		<ul class="nav navbar-nav navbar-right">
 			<!-- <a class="navbar-brand" href="{% url 'login'%}">User Login</a> -->
 			<!-- <a class="navbar-brand" href="{% url 'admin_login'%}">Admin Login</a> -->
+      <a class="navbar-brand"> {{ request.user.username}}
       <a class="navbar-brand" href="{% url 'index'%}">Sign out</a>
 
 		</ul>
@@ -34,7 +35,7 @@
   <source src="{% static 'images/background.mp4' %}" type="video/mp4"> </source>
   </video>
     <div>
-        
+
     </div>
     <hr />
 

@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from CityApp.forms import UserForm, UserProfileForm
 from templates.function import write_func
+from CityApp.models import CityInfo
 
 
 # Create your views here.
@@ -22,12 +23,14 @@ def admin_login(request, template_name):
     return render(request, 'CityApp/admin_login.html')
 
 def info_page(request):
-    return render(request, 'CityApp/infopage.html')
-	
+    cityInfo = CityInfo.objects.all()
+    context = {'cityInfo':cityInfo}
+    return render(request, 'CityApp/infopage.html', context)
+
 def button(request):
 	return render(request, 'CityApp/button.html')
 
-def button_function(request):	
+def button_function(request):
 	write_func()
 	return render(request, 'CityApp/button.html', {})
 

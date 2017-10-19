@@ -6,7 +6,7 @@
 
 
 <head>
- 
+
  {% block css_block %}
 {% load staticfiles %}
 <link href="{% static 'CityApp/base.css' %}" rel="stylesheet">
@@ -14,87 +14,92 @@
 
 
 {% endblock %}
-	
+
  {% block body_block %}
- 
+
 
   <ul class="list" style="height:100%;overflow:hidden; overflow-y:scroll;">
     <li>
-      
+      {% for s in cityInfo %}
+        <li>
+          {{s.name}}
+        </li>
+      {% endfor %}
+      <!--
       <h3>Place 1</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 	<li>
-      
+
       <h3>Place 1</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 	<li>
-      
+
       <h3>Place 1</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 	<li>
-      
+
       <h3>Place 1</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 	<li>
-      
+
       <h3>Place 1</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 	<li>
-      
+
       <h3>Place 1</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
-      
+
     <li>
-      
+
       <h3>Place 2</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 
     <li>
-      
+
       <h3>Place 3</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 
     <li>
-      
+
       <h3>Place 4</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 	<li>
-      
+
       <h3>Place 4</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 	<li>
-      
+
       <h3>Place 4</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 	<li>
-      
+
       <h3>Place 4</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 	<li>
-      
+
       <h3>Place 4</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
     </li>
 	<li>
-      
+
       <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p> -->
     </li>
   </ul>
-  
-  
+
+
   <form class="map">
 	{% with 1334 as w and 750 as h and 16 as z and "easy_maps/map.html" as t  %}
       {% easy_map "Brisbane, Queensland " w h z using t %}
