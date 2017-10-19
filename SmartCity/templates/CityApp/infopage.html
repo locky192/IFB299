@@ -20,9 +20,10 @@
 
   <ul class="list" style="height:100%;overflow:hidden; overflow-y:scroll;">
     <li>
-      {% for s in cityInfo %}
+      {% for details in cityInfo %}
         <li>
-          {{s.name}}
+          <h3>{{details.name}}</h3>
+          <p>{{ details.industry_type}}: </p>
         </li>
       {% endfor %}
       <!--
