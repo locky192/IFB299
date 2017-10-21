@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
 from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
@@ -31,17 +30,23 @@ class CityInfo (models.Model):
     phone_number = models.CharField(blank=True, max_length = 15)
     unit_number = models.CharField(blank=True, max_length = 3)
     street_number = models.CharField(blank=True, max_length = 3)
+    street_name = models.CharField(blank=True, max_length = 20)
     suburb = models.CharField(blank=True, max_length = 20)
     state = models.CharField(blank=True, max_length = 20)
     postcode = models.CharField(blank=True, max_length = 4)
     email = models.CharField(blank=True, max_length = 100)
 
+<<<<<<< HEAD
     slug = models.SlugField(blank=True, unique=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
         super(CityInfo, self).save(*args, **kwargs)
 
+=======
+    longitude = models.FloatField(blank=True, default = 0)
+    latitude = models.FloatField(blank=True, default = 0)
+>>>>>>> master
 
 
     def __str__(self):
@@ -54,11 +59,16 @@ class UserProfile (models.Model):
     phone_number = models.CharField(blank=True, max_length = 15)
     unit_number = models.CharField(blank=True, max_length = 3)
     street_number = models.CharField(blank=True, max_length = 3)
+    street_name = models.CharField(blank=True, max_length = 20)
     suburb = models.CharField(blank=True, max_length = 20)
     state = models.CharField(blank=True, max_length = 20)
     postcode = models.CharField(blank=True, max_length = 4)
+<<<<<<< HEAD
 
 
+=======
+    
+>>>>>>> master
     website = models.URLField(blank=True)
     picture = models.ImageField(upload_to='profile_images', blank=True)
 
