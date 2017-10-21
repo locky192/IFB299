@@ -27,6 +27,23 @@ def info_page(request):
     context = {'cityInfo':cityInfo}
     return render(request, 'CityApp/infopage.html', context)
 
+# def specificInfo(request):
+#
+#     return render(request, 'CityApp/specificInfo.html')
+
+def show_landmark(request, landmark_name_slug):
+    context_dict = {}
+
+    try:
+        landmark = CityInfo.objects.get(slug=landmark_name_slug)
+
+        context_dict['landmark']= landmark
+
+    except cityInfo.DoesNotExist:
+        context_dict['landmark']= None
+
+    return render(request, 'CityApp/landmark.html', context_dict)
+
 def button(request):
 	return render(request, 'CityApp/button.html')
 

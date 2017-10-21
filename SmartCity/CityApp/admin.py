@@ -6,6 +6,9 @@ from django.contrib import admin
 from CityApp.models import UserProfile, CityInfo
 
 # Register your models here.
-admin.site.register(UserProfile)
-admin.site.register(CityInfo)
+class CityInforAdmin(admin.ModelAdmin):
+    prepopulated_Fields = {'slug':('name',)}
 
+
+admin.site.register(UserProfile)
+admin.site.register(CityInfo, CityInforAdmin)

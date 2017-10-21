@@ -22,81 +22,12 @@
     <li>
       {% for details in cityInfo %}
         <li>
-          <h3>{{details.name}}</h3>
+          <!-- <h3><a href="{{ details.url }}">{{details.name}}</a></h3> -->
+          <h3><a href="/CityApp/landmark/{{ details.slug }}">{{details.name}}</a></h3>
           <p>{{ details.industry_type}}: </p>
         </li>
       {% endfor %}
-      <!--
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
 
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-
-    <li>
-
-      <h3>Place 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-
-    <li>
-
-      <h3>Place 3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-
-    <li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p> -->
     </li>
   </ul>
 

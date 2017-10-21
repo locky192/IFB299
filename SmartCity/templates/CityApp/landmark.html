@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+{% extends 'CityApp/base.html' %}
+
+<html>
+
+
+<head>
+
+ {% block css_block %}
+{% load staticfiles %}
+<link href="{% static 'CityApp/base.css' %}" rel="stylesheet">
+<link href="{% static 'CityApp/Sinfo.css' %}" rel="stylesheet">
+
+
+{% endblock %}
+
+{% block body_block %}
+
+
+<form class="panel" style="height:100%;overflow:hidden;">
+  <img class"image" src="{% static 'images/background.jpg' %}"/ height="247" >
+
+
+</form>
+
+
+<form class="info">
+  <h2>{{landmark.name}}</h3>
+  {{landmark.postcode}}
+
+</form>
+
+
+{% endblock %}
+
+
+</html>
