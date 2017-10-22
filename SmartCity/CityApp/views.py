@@ -26,13 +26,18 @@ def admin_login(request, template_name):
     return render(request, 'CityApp/admin_login.html')
 
 def info_page(request):
-    cityInfo = CityInfo.objects.all()
-    context = {'cityInfo':cityInfo}
-    return render(request, 'CityApp/infopage.html', context)
+	userid= request.user.id
+	print(userid)
+	currentUser=UserProfile.objects.get(id=7)	
+	cityInfo = CityInfo.objects.all()
+	context = {'cityInfo':cityInfo, 'currentUser':currentUser}
+		
+	return render(request, 'CityApp/infopage.html', context)
 
-# def specificInfo(request):
-#
-#     return render(request, 'CityApp/specificInfo.html')
+def library_list(request):
+	cityInfo = CityInfo.objects.filter("Hotel")
+	context = {'cityInfo':cityInfo}
+	return render(request, 'CityApp/infopage.html', context)
 
 def xml_page(request):
     response = render_to_response('CityApp/convertcsv.xml')

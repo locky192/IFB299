@@ -20,5 +20,6 @@ urlpatterns = [
 	url(r'^admin/login/$', auth_views.login, {'template_name': 'CityApp/admin_login.html'}, name='admin_login'),
     url(r'^admin/', admin.site.urls),url(r'^button/$',views.button, name='button'),
 	url(r'^button_function/$',views.button_function, name= 'button_function'),
-    url(r'^xml_page/$',views.xml_page, name= 'xml')
+    url(r'^xml_page/$',views.xml_page, name= 'xml'),
+	url(r'^/infopage/#libraries', views.library_list, name='library_list')
 ]
