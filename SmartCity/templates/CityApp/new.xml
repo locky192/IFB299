@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<markers>
+   <marker id="1" name="QUT" address="     " lat="1.0" lng="1.0" type="College" />
+   <marker id="2" name="Australia Zoo" address="   Cee Qld 3232" lat="1.0" lng="1.0" type="Zoo" />
+   <marker id="3" name="Grilld" address="1 27 Albert st  Brisbane Queensland 4000" lat="1.0" lng="1.0" type="restuarant" />
+   <marker id="4" name="State Library" address="1 Stanley PL  South Brisbane Queensland 4101" lat="1.0" lng="1.0" type="Library" />
+   <marker id="5" name="Lone Pine" address="1 12 Lone Pine Rd  Logan Queensland 4201" lat="1.0" lng="1.0" type="Zoo" />
+   <marker id="6" name="Factory Direct" address="1 13 Busy Road  Browns Plains Queensland 4120" lat="1.0" lng="1.0" type="Industry" />
+   <marker id="7" name="Mantra" address="1 9 Hussle ct  Brisbane Queensland 4000" lat="1.0" lng="1.0" type="Hotel" />
+   <marker id="8" name="Generic" address="     " lat="123131.2323232" lng="23.23" type="Restaurant" />
+   <marker id="9" name="QUT" address="22 22 Edward st CBD QLD 4928" lat="1.0" lng="1.0" type="College" />
+   <marker id="10" name="QUT" address="22 22 Edward st CBD QLD 4928" lat="1.0" lng="1.0" type="College" />
+   <marker id="11" name="QUT" address="22 22 Edward st CBD QLD 4928" lat="1.0" lng="1.0" type="College" />
+   <marker id="12" name="Brisbane Industrial Agencies" address="1154 1154 152.9592675 Arana Hills 4054 QLD" lat="-27.3884775" lng="Pine Rd" type="Industry" />
+   <marker id="13" name="Brisbane Industrial Agencies" address="1154 1154 152.9592675 Arana Hills 4054 QLD" lat="-27.3884775" lng="Pine Rd" type="Industry" />
+   <marker id="14" name="All Cool Industries" address="239 239 153.0233498 Brisbane City 4000 QLD" lat="-27.470153" lng="George St" type="Industry" />
+   <marker id="15" name="Brisbane Industrial Agencies" address="1154 1154 152.9592675 Arana Hills 4054 QLD" lat="-27.3884775" lng="Pine Rd" type="Industry" />
+   <marker id="16" name="All Cool Industries" address="239 239 153.0233498 Brisbane City 4000 QLD" lat="-27.470153" lng="George St" type="Industry" />
+   <marker id="17" name="Bidfood Fresh" address="9 9 153.0000866 Rocklea 4106 QLD" lat="-27.5338448" lng="Sherwood Road" type="Industry" />
+   <marker id="18" name="Hastings Deering Group Administration" address="973 973 153.0102894 Brisbane City 4105 QLD" lat="-27.5379698" lng="Fairfield Rd" type="Industry" />
+   <marker id="19" name="Simon George &amp; Sons" address="1 1 153.0001473 Rocklea 4106 QLD" lat="-27.5338433" lng="Sherwood Road" type="Industry" />
+   <marker id="20" name="Brisbane Industrial Agencies" address="1154 1154 Pine Rd Arana Hills QLD 4054" lat="-27.3884775" lng="152.9592675" type="Industry" />
+   <marker id="21" name="All Cool Industries" address="239 239 George St Brisbane City QLD 4000" lat="-27.470153" lng="153.0233498" type="Industry" />
+   <marker id="22" name="Bidfood Fresh" address="9 9 Sherwood Road Rocklea QLD 4106" lat="-27.5338448" lng="153.0000866" type="Industry" />
+   <marker id="23" name="Hastings Deering Group Administration" address="973 973 Fairfield Rd Brisbane City QLD 4105" lat="-27.5379698" lng="153.0102894" type="Industry" />
+   <marker id="24" name="Simon George &amp; Sons" address="1 1 Sherwood Road Rocklea QLD 4106" lat="-27.5338433" lng="153.0001473" type="Industry" />
+   <marker id="25" name="ibis Styles Brisbane Elizabeth Street" address="40 40 Elizabeth St Brisbane City QLD 4000" lat="-27.4713676" lng="153.0245203" type="Hotel" />
+   <marker id="26" name="Pullman Brisbane King George Square" address="1 1 Ann St Brisbane City QLD 4000" lat="-27.4683174" lng="153.0235326" type="Hotel" />
+   <marker id="27" name="The Point Brisbane" address="21 21 Lambert St  Kangaroo Point QLD 4169" lat="-27.4740138" lng="153.0364606" type="Hotel" />
+   <marker id="28" name="Best Western Astor Metropole Hotel &amp; Apartments" address="193 193 Wickham Terrace Brisbane City QLD business@gmail.com" lat="-27.4649216" lng="153.0240115" type="Hotel" />
+   <marker id="29" name="ibis Brisbane" address="27 27 business@gmail.com Brisbane City QLD 4000" lat="Turbot St" lng="153.0210804" type="Hotel" />
+   <marker id="30" name="Holiday Inn Express Brisbane Central" address="168 168 Wharf Street Spring Hill QLD 4000" lat="-27.4627757" lng="153.0270969" type="Hotel" />
+   <marker id="31" name="The Great Southern Hotel Brisbane" address="103 103 George St Brisbane City QLD 4000" lat="-27.4727829" lng="153.02569" type="Hotel" />
+   <marker id="32" name="Hotel Grand Chancellor Brisbane" address="23 23 Leichhardt St Brisbane City QLD 4000" lat="-27.4624363" lng="153.0217714" type="Hotel" />
+   <marker id="33" name="George Williams Hotel" address="317 317 George St Brisbane City QLD 4000" lat="-27.468803" lng="153.0217947" type="Hotel" />
+   <marker id="34" name="Adina Apartment Hotel Brisbane Anzac Square" address="255 255 Ann St Brisbane City QLD 4000" lat="-27.4668244" lng="153.026049" type="Hotel" />
+   <marker id="35" name="The Sebel" address="1 1 Albert St Brisbane City QLD 4000" lat="-27.471181" lng="153.0267409" type="Hotel" />
+   <marker id="36" name="Hilton Brisbane" address="190 190 Elizabeth St Brisbane City QLD 4000" lat="-27.4691949" lng="153.0268297" type="Hotel" />
+   <marker id="37" name="Four Points by Sheraton Brisbane" address="99 99 Mary St Brisbane City QLD 4000" lat="-27.471837" lng="153.0281413" type="Hotel" />
+   <marker id="38" name="Novotel Brisbane" address="200 200 Creek St Brisbane City QLD 4000" lat="-27.4635947" lng="153.0267066" type="Hotel" />
+   <marker id="39" name="Institute for Molecular Bioscience" address="306 306 Carmody Rd Brisbane City QLD 4000" lat="-27.4981682" lng="153.0102956" type="College" />
+   <marker id="40" name="James Cook University, Brisbane Campus" address="349 349 Queen St Brisbane City QLD 4000" lat="-27.4666898" lng="153.0294776" type="College" />
+   <marker id="41" name="UQ Business School Executive Education" address="345 345 Queen St Brisbane City QLD 4000" lat="-27.467049" lng="153.0290556" type="College" />
+   <marker id="42" name="CQUniversity" address="160 160 Ann St Brisbane City QLD 4000" lat="-27.4673899" lng="153.024274" type="College" />
+   <marker id="43" name="Queensland University of Technology" address="2 2 George St Brisbane City QLD 4000" lat="-27.4773565" lng="153.0284154" type="College" />
+   <marker id="44" name="University of Queensland" address="1 1 St St Lucia QLD 4072" lat="-27.4978543" lng="153.0132861" type="College" />
+   <marker id="45" name="Australian Institute for Bioengineering and Nanotechnology" address="75 75 Cooper Rd Brisbane City QLD 4072" lat="-27.50079" lng="153.0129083" type="College" />
+   <marker id="46" name="Charles Sturt University Study Centres, Brisbane" address="119 119 Charlotte St Brisbane City QLD 4000" lat="-27.4709768" lng="153.0274623" type="College" />
+   <marker id="47" name="UQ School of Dentistry" address="288 288 Herston Rd Herston QLD 4006" lat="-27.4489226" lng="153.0240593" type="College" />
+   <marker id="48" name="Torrens University Brisbane, Fortitude Valley Campus" address="90 90 Bowen Terrace Fortitude Valley QLD 4006" lat="-27.4611763" lng="153.0360738" type="College" />
+   <marker id="49" name="Griffith University" address="170 170  Kessels Rd Nathan QLD 4111" lat="-27.5569495" lng="153.0534449" type="College" />
+   <marker id="50" name="Brisbane City Council Library" address="1 1 Fairfield Road Fairfield QLD 4103" lat="-27.509139" lng="153.0260141" type="Library" />
+   <marker id="51" name="Brisbane City Council - Annerley Library" address="450 450 Ipswich Rd Annerly QLD 4103" lat="-27.5094244" lng="153.0333848" type="Library" />
+   <marker id="52" name="UQ/Mater McAuley Library" address="1 1 St South Brisbane QLD 4101" lat="-27.4851552" lng="153.0279675" type="Library" />
+   <marker id="53" name="Corinda Library" address="641 641 Oxely Rd Brisbane QLD 4075" lat="-27.5388809" lng="152.9814197" type="Library" />
+   <marker id="54" name="State Library of Queensland" address="1 1 Stanley PI South Brisbane QLD 4101" lat="-27.4713494" lng="153.0170034" type="Library" />
+   <marker id="55" name="Indooroopilly Shopping Centre" address="322 322 Moggill Rd Indooroopilly QLD 4068" lat="-27.4991637" lng="152.9726834" type="Mall" />
+   <marker id="56" name="The Myer Centre, Brisbane" address="91 91 Queen St Brisbane City QLD 4000" lat="-27.4704791" lng="153.0247888" type="Mall" />
+   <marker id="57" name="Queen Street Mall" address="1 1 Queen St Brisbane City QLD 4000" lat="-27.4695872" lng="153.0252547" type="Mall" />
+   <marker id="58" name="Wintergarden" address="171 171 Queen St Brisbane City QLD 4000" lat="-27.4688187" lng="153.0261841" type="Mall" />
+   <marker id="59" name="MacArthur Central" address="255 255 Queen St Brisbane City QLD 4000" lat="-27.468193" lng="153.027771" type="Mall" />
+   <marker id="60" name="Brisbane Industrial Agencies" address="1154 1154 Pine Rd Arana Hills QLD 4054" lat="-27.3884775" lng="152.9592675" type="Industry" />
+   <marker id="61" name="All Cool Industries" address="239 239 George St Brisbane City QLD 4000" lat="-27.470153" lng="153.0233498" type="Industry" />
+   <marker id="62" name="Bidfood Fresh" address="9 9 Sherwood Road Rocklea QLD 4106" lat="-27.5338448" lng="153.0000866" type="Industry" />
+   <marker id="63" name="Hastings Deering Group Administration" address="973 973 Fairfield Rd Brisbane City QLD 4105" lat="-27.5379698" lng="153.0102894" type="Industry" />
+   <marker id="64" name="Simon George &amp; Sons" address="1 1 Sherwood Road Rocklea QLD 4106" lat="-27.5338433" lng="153.0001473" type="Industry" />
+</markers>
+
