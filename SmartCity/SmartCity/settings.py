@@ -47,7 +47,7 @@ if django.VERSION < (1, 7):
         'south',
     )
 
-EASY_MAPS_GOOGLE_MAPS_API_KEY = 'AIzaSyAkUxFDx4duv5keEAbsHTvmY_4At2UUy9w' 
+EASY_MAPS_GOOGLE_MAPS_API_KEY = 'AIzaSyAkUxFDx4duv5keEAbsHTvmY_4At2UUy9w'
 
 EASY_MAPS_CENTER = (-41.3, 32)
 
@@ -139,4 +139,4 @@ USE_TZ = True
 STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = 'signed'
+LOGIN_REDIRECT_URL = 'infopage'

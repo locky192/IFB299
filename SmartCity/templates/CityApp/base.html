@@ -14,16 +14,33 @@
 	 <nav class="navbar navbar-inverse">
 
 		<ul class="navbar-left">
-			<a class="navbar-brand" href="{% url 'index'%}">Home</a>
+
+
+      {% if user.is_authenticated %}
+      <a class="navbar-brand" href="{% url 'index'%}">Home</a>
+      <a class="navbar-brand"> Welcome: {{request.user.username}} : {{user.userprofile.user_type}}</a>
+
+      {% else %}
+      <a class="navbar-brand" href="{% url 'index'%}">Home</a>
 			<a class="navbar-brand" href="{% url 'register'%}">Register</a>
-      <a class="navbar-brand">{{request.user.username}} {{request.profile.user_type}}</a>
+      {% endif %}
+
 		</ul>
 
 
 
 		<ul class="nav navbar-nav navbar-right">
+      {% if user.is_authenticated %}
+      <a class="navbar-brand" href="{% url 'infopage'%}">Map</a>
+      <a class="navbar-brand" href="{% url 'logout'%}">logout</a>
+      {% if user.is_superuser %}
+      <a class="navbar-brand" href="{% url 'admin_login'%}">Admin Login</a>
+      {% endif %}
+
+      {% else %}
 			<a class="navbar-brand" href="{% url 'login'%}">User Login</a>
 			<a class="navbar-brand" href="{% url 'admin_login'%}">Admin Login</a>
+      {% endif %}
 
 
 		</ul>

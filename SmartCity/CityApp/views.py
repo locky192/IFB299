@@ -6,13 +6,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from CityApp.forms import UserForm, UserProfileForm
 from templates.function import write_func
-from CityApp.models import CityInfo
+from CityApp.models import CityInfo, UserProfile
 from django.shortcuts import render_to_response
 
 
 # Create your views here.
 def index(request):
-    return render(request, 'CityApp/index.html')
+    userProfile = UserProfile.objects.all()
+    context = {'userProfile': userProfile}
+    return render(request, 'CityApp/index.html', context)
 
 def signed (request):
     return render(request, 'CityApp/signed.html')
