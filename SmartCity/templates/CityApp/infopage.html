@@ -22,12 +22,13 @@
     <li>
       {% for details in cityInfo %}
         <li>
-          <h3>{{details.name}}</h3>
+
+          <h3><a href="/CityApp/landmark/{{ details.slug }}">{{details.name}}</a></h3>
 		  <h4>{{ details.landmark_type}} </h4>
 		  {% if details.landmark_type == "Industry"  %}
 		            <p>Industry type: {{details.industry_type}}: </p>
 		  {% endif %}
-		<p>{{ details.user_type}} </p>	
+		<p>{{ details.user_type}} </p>
 		<p>{{ details.phone_number}} </p>
 		<p>{{ details.email}} </p>
 		<p>Address: {{ details.unit_number}} {{ details.street_number}} {{ details.street_name}} {{ details.suburb}}
@@ -35,82 +36,13 @@
 		<p>Long: {{ details.longitude}} </p>
 		<p>Lat: {{ details.latitude}} </p>
 
-		
-		
-			  
+
+
+
+
         </li>
       {% endfor %}
-      <!--
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
 
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-
-    <li>
-
-      <h3>Place 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-
-    <li>
-
-      <h3>Place 3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-
-    <li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-    </li>
-	<li>
-
-      <h3>Place 4</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p> -->
     </li>
   </ul>
 
@@ -122,7 +54,7 @@
 		right: 0px;
 		top: 0px;
 		 margin-top: 100px;
-		
+
        }
     </style>
 
@@ -130,78 +62,40 @@
   <body>
     <h3>My Google Maps Demo</h3>
     <div id="map"></div>
-        <script>
-      var customLabel = {
-        restaurant: {
-          label: 'R'
-        },
-        bar: {
-          label: 'B'
-        }
-      };
-
-        function initMap() {
+    <script>
+      function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(-27.5284775, 152.9992675),
-          zoom: 12
+          zoom: 10,
+          center: {lat: -27.470125, lng: 153.021072},
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        position: google.maps.ControlPosition.TOP_CENTER
+    },
+    zoomControl: true,
+    zoomControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_CENTER
+    },
+    scaleControl: true,
+    streetViewControl: true,
+    streetViewControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_TOP
+    },
+    fullscreenControl: true
+
+    });
+        var marker = new google.maps.Marker({
+          position: {lat: -27.470125, lng: 153.021072},
+          map: map
         });
-        var infoWindow = new google.maps.InfoWindow;
+		var marker1 = new google.maps.Marker({
+          position: {lat: -27.470125, lng: 153},
+          map: map
+        });
 
-          // Change this depending on the name of your PHP or XML file
-          downloadUrl('http://127.0.0.1:8000/CityApp/xml_page/', function(data) {
-            var xml = data.responseXML;
-            var markers = xml.documentElement.getElementsByTagName('marker');
-            Array.prototype.forEach.call(markers, function(markerElem) {
-              var id = markerElem.getAttribute('id');
-              var name = markerElem.getAttribute('name');
-              var address = markerElem.getAttribute('address');
-              var type = markerElem.getAttribute('type');
-              var point = new google.maps.LatLng(
-                  parseFloat(markerElem.getAttribute('lat')),
-                  parseFloat(markerElem.getAttribute('lng')));
-
-              var infowincontent = document.createElement('div');
-              var strong = document.createElement('strong');
-              strong.textContent = name
-              infowincontent.appendChild(strong);
-              infowincontent.appendChild(document.createElement('br'));
-
-              var text = document.createElement('text');
-              text.textContent = address
-              infowincontent.appendChild(text);
-              var icon = customLabel[type] || {};
-              var marker = new google.maps.Marker({
-                map: map,
-                position: point,
-                label: icon.label
-              });
-              marker.addListener('click', function() {
-                infoWindow.setContent(infowincontent);
-                infoWindow.open(map, marker);
-              });
-            });
-          });
-        }
-
-
-
-      function downloadUrl(url, callback) {
-        var request = window.ActiveXObject ?
-            new ActiveXObject('Microsoft.XMLHTTP') :
-            new XMLHttpRequest;
-
-        request.onreadystatechange = function() {
-          if (request.readyState == 4) {
-            request.onreadystatechange = doNothing;
-            callback(request, request.status);
-          }
-        };
-
-        request.open('GET', url, true);
-        request.send(null);
+		marker.setMap(map);
+		marker1.setMap(map);
       }
-
-      function doNothing() {}
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkUxFDx4duv5keEAbsHTvmY_4At2UUy9w&callback=initMap">
