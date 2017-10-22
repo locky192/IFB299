@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from CityApp.forms import UserForm, UserProfileForm
 from templates.function import write_func
 from CityApp.models import CityInfo
+from django.shortcuts import render_to_response
 
 
 # Create your views here.
@@ -32,7 +33,10 @@ def info_page(request):
 #     return render(request, 'CityApp/specificInfo.html')
 
 def xml_page(request):
-    return render(request, 'CityApp/convertcsv.xml')
+    response = render_to_response('CityApp/convertcsv.xml')
+    response['Content-Type'] = 'application/xml;'
+    # return render(request, 'CityApp/convertcsv.xml')
+    return response
 
 def show_landmark(request, landmark_name_slug):
     context_dict = {}
