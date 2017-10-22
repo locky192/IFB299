@@ -31,6 +31,9 @@ def info_page(request):
 #
 #     return render(request, 'CityApp/specificInfo.html')
 
+def xml_page(request):
+    return render(request, 'CityApp/convertcsv.xml')
+
 def show_landmark(request, landmark_name_slug):
     context_dict = {}
 
