@@ -9,6 +9,7 @@ class CityInfo (models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
     landmark_type = models.CharField(blank=True, max_length=30)
+    landmark_pic = models.ImageField(upload_to = 'images', blank=True) 
 
     business = 'Business'
     student = 'Student'
