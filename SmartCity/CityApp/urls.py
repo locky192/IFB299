@@ -13,13 +13,14 @@ urlpatterns = [
     url(r'^register/$', views.register,
     name='register'),
     url(r'^signed/$', views.signed, name='signed'),
-        url(r'^infopage/$', views.info_page, name='infopage'),
-        url(r'^landmark/(?P<landmark_name_slug>[\w\-]+)/$', views.show_landmark, name='show_landmark'),
+    url(r'^infopage/$', views.info_page, name='infopage'),
+    url(r'^landmark/(?P<landmark_name_slug>[\w\-]+)/$', views.show_landmark, name='show_landmark'),
 	url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^login/$', auth_views.login, {'template_name': 'CityApp/login.html'}, name='login'),
 	url(r'^admin/login/$', auth_views.login, {'template_name': 'CityApp/admin_login.html'}, name='admin_login'),
     url(r'^admin/', admin.site.urls),url(r'^button/$',views.button, name='button'),
 	url(r'^button_function/$',views.button_function, name= 'button_function'),
     url(r'^xml_page/$',views.xml_page, name= 'xml'),
-	url(r'^/infopage/#libraries', views.library_list, name='library_list')
+	url(r'^/infopage/#libraries', views.library_list, name='library_list'),
+    url(r'^account/update/$', views.update_profile, name='update'),
 ]

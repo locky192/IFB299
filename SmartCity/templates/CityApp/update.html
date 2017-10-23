@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+{% extends 'CityApp/base.html' %}
+<html>
+
+
+<head>
+
+ {% block css_block %}
+{% load staticfiles %}
+<link href="{% static 'CityApp/registration.css' %}" rel="stylesheet">
+{% endblock %}
+
+  </head>
+{% block title_block %}
+  <title>CityApp Registration</title>
+{% endblock %}
+
+{% block body_block %}
+  <h1>User Update</h1>
+
+
+	<form>
+      <strong>Thank you for registering!</strong>
+     <strong> <a href="{% url 'index' %}">Return to the homepage.</a></strong><br />
+	</form>
+
+
+
+	  <div class="form">
+
+      <form method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+
+      <!-- Display each form -->
+
+      <!-- {{ profile_form.as_p }} -->
+      <!-- Provide a button to click to submit the form. -->
+	  <button type="submit" class="submit">Submit</button>
+
+    </form>
+	</div>
+
+
+    
+{% endblock %}
+</html>
