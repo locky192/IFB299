@@ -18,6 +18,7 @@
       <a class="navbar-brand" href="{% url 'index'%}">Home</a>
       <a class="navbar-brand"> Welcome: {{request.user.username}} : {{user.userprofile.user_type}}</a>
 
+
       {% else %}
       <a class="navbar-brand" href="{% url 'index'%}">Home</a>
 			<a class="navbar-brand" href="{% url 'register'%}">Register</a>
@@ -30,6 +31,7 @@
 		<ul class="nav navbar-nav navbar-right">
       {% if user.is_authenticated %}
       <a class="navbar-brand" href="{% url 'infopage'%}">Map</a>
+      <a class="navbar-brand" href="{% url 'update'%}">Change settings</a>
       <a class="navbar-brand" href="{% url 'logout'%}">logout</a>
       {% if user.is_superuser %}
       <a class="navbar-brand" href="{% url 'admin_login'%}">Admin Login</a>
