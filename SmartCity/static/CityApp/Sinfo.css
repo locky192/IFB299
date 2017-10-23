@@ -8,7 +8,9 @@ body, form{
 }
 
 
-
+h1{
+	text-decoration: underline;
+}
 
 
 .panel{

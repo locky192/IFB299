@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-
+from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect
 from CityApp.forms import UserForm, UserProfileForm, UpdateProfile
 from templates.function import write_func
@@ -28,17 +28,39 @@ def admin_login(request, template_name):
 
 def info_page(request):
 	userid= request.user.id
-	print(userid)
-	currentUser=UserProfile.objects.get(id=7)
-	cityInfo = CityInfo.objects.all()
-	context = {'cityInfo':cityInfo, 'currentUser':currentUser}
-
+	
+	currentUser=UserProfile.objects.get(user_id=userid)
+	
+	
+	if currentUser.user_type == 'Tourist':
+		hotelInfo= CityInfo.objects.filter(landmark_type='Hotel')
+		cityInfo=CityInfo.objects.filter(Q(landmark_type='Mall') | Q(landmark_type='Park') | Q(landmark_type='Zoo'))
+		cityInfo=cityInfo.order_by('name')
+		context={'context1': cityInfo, 'context2':hotelInfo, 'currentUser':currentUser}
+		return render(request, 'CityApp/infopage.html', context)
+		
+	if currentUser.user_type == 'Student':
+		collegeInfo= CityInfo.objects.filter(landmark_type='College')
+		libraryInfo=CityInfo.objects.filter(landmark_type='Library')
+		cityInfo=CityInfo.objects.filter(Q(landmark_type='Mall') | Q(landmark_type='Park') | Q(landmark_type='Zoo'))
+		cityInfo=cityInfo.order_by('name')
+		context={'context1': cityInfo, 'context2':collegeInfo, 'context3': libraryInfo, 'currentUser':currentUser}
+		return render(request, 'CityApp/infopage.html', context)
+		
+	if currentUser.user_type == 'Business':
+		hotelInfo= CityInfo.objects.filter(landmark_type='Hotel')
+		industryInfo=CityInfo.objects.filter(landmark_type='Industry')
+		cityInfo=CityInfo.objects.filter(Q(landmark_type='Mall') | Q(landmark_type='Park') | Q(landmark_type='Zoo'))
+		cityInfo=cityInfo.order_by('name')
+		context={'context1': cityInfo, 'context2':hotelInfo, 'context3': industryInfo, 'currentUser':currentUser}
+		return render(request, 'CityApp/infopage.html', context)
+	
+	
+	context = {'cityInfo':cityInfo, 'currentUser':currentUser, 'libraryInfo': libraryInfo}
+	
 	return render(request, 'CityApp/infopage.html', context)
 
-def library_list(request):
-	cityInfo = CityInfo.objects.filter("Hotel")
-	context = {'cityInfo':cityInfo}
-	return render(request, 'CityApp/infopage.html', context)
+
 
 def xml_page(request):
     response = render_to_response('CityApp/convertcsv.xml')

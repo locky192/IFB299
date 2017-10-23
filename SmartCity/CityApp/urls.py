@@ -21,6 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),url(r'^button/$',views.button, name='button'),
 	url(r'^button_function/$',views.button_function, name= 'button_function'),
     url(r'^xml_page/$',views.xml_page, name= 'xml'),
-	url(r'^/infopage/#libraries', views.library_list, name='library_list'),
     url(r'^account/update/$', views.update_profile, name='update'),
 ]

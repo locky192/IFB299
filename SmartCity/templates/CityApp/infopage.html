@@ -22,33 +22,13 @@
 
   <ul class="list" style="height:100%;overflow:hidden; overflow-y:scroll;">
     <li>
-	<ul class="nav nav-tabs">
-
-	{% if currentUser.user_type == "Business" %}
-    <li class="active"><a data-toggle="tab" href="#cityinfo">CityInfo</a></li>
-    <li><a data-toggle="tab" href="#hotels">Hotels</a></li>
-    <li><a data-toggle="tab" href="#industry">Industry</a></li>
-	{% endif %}
-
-	{% if currentUser.user_type == "Tourist" %}
-    <li class="active"><a data-toggle="tab" href="#cityinfo">CityInfo</a></li>
-    <li><a data-toggle="tab" href="#hotels">Hotels</a></li>
-	{% endif %}
-
-	{% if currentUser.user_type == "Student" %}
-    <li class="active"><a data-toggle="tab" href="#cityinfo">CityInfo</a></li>
-    <li><a data-toggle="tab" href="#colleges">Colleges</a></li>
-    <li><a data-toggle="tab" href="#libraries">Libraries</a></li>
-
-
-	{% endif %}
-  </ul>
-
-
-  {% for details in cityInfo %}
-     {% if currentUser.user_type == details.user_type or details.user_type == "General" %}
+	
+	
+	<h1>City Information </h1>
+  {% for details in context1 %}
+     
        <li>
-
+		
          <h3><a href="/CityApp/landmark/{{ details.slug }}">{{details.name}}</a></h3>
      <h4>{{ details.landmark_type}} </h4>
      {% if details.landmark_type == "Industry"  %}
@@ -60,16 +40,67 @@
    <p>Address: {{ details.unit_number}} {{ details.street_number}} {{ details.street_name}} {{ details.suburb}}
    {{ details.state}} {{ details.postcode}}</p>
    <p>Long: {{ details.longitude}} </p>
-   <p>Lat: {{ details.latitude}} </p>
-
-
-
-
-   {% endif %}
+   <p>Lat: {{ details.latitude}} </p> 
        </li>
      {% endfor %}
+	 
+{% if currentUser.user_type == "Tourist" or currentUser.user_type == "Business" %}
+	<h1>Hotels</h1>
+{% endif %}
+
+{% if currentUser.user_type == "Student" %}
+	<h1>Colleges</h1>
+{% endif %}
 
 
+{% for details in context2 %}
+     
+       <li>
+		
+         <h3><a href="/CityApp/landmark/{{ details.slug }}">{{details.name}}</a></h3>
+     <h4>{{ details.landmark_type}} </h4>
+     {% if details.landmark_type == "Industry"  %}
+               <p>Industry type: {{details.industry_type}}: </p>
+     {% endif %}
+   <p>{{ details.user_type}} </p>
+   <p>{{ details.phone_number}} </p>
+   <p>{{ details.email}} </p>
+   <p>Address: {{ details.unit_number}} {{ details.street_number}} {{ details.street_name}} {{ details.suburb}}
+   {{ details.state}} {{ details.postcode}}</p>
+   <p>Long: {{ details.longitude}} </p>
+   <p>Lat: {{ details.latitude}} </p> 
+       </li>
+     {% endfor %}
+	 
+{% if currentUser.user_type == "Business"  %}
+	<h1>Industry</h1>
+{% endif %}
+
+{% if currentUser.user_type == "Student" %}
+	<h1>Libraries</h1>
+{% endif %}
+	 
+	 {% for details in context3 %}
+     
+       <li>
+		
+         <h3><a href="/CityApp/landmark/{{ details.slug }}">{{details.name}}</a></h3>
+     <h4>{{ details.landmark_type}} </h4>
+     {% if details.landmark_type == "Industry"  %}
+               <p>Industry type: {{details.industry_type}}: </p>
+     {% endif %}
+   <p>{{ details.user_type}} </p>
+   <p>{{ details.phone_number}} </p>
+   <p>{{ details.email}} </p>
+   <p>Address: {{ details.unit_number}} {{ details.street_number}} {{ details.street_name}} {{ details.suburb}}
+   {{ details.state}} {{ details.postcode}}</p>
+   <p>Long: {{ details.longitude}} </p>
+   <p>Lat: {{ details.latitude}} </p> 
+       </li>
+     {% endfor %}
+	 
+	 
+	
 
 </li>
 </ul>
