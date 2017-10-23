@@ -28,10 +28,10 @@ def admin_login(request, template_name):
 def info_page(request):
 	userid= request.user.id
 	print(userid)
-	currentUser=UserProfile.objects.get(id=7)	
+	currentUser=UserProfile.objects.get(id=7)
 	cityInfo = CityInfo.objects.all()
 	context = {'cityInfo':cityInfo, 'currentUser':currentUser}
-		
+
 	return render(request, 'CityApp/infopage.html', context)
 
 def library_list(request):

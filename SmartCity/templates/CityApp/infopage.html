@@ -11,6 +11,8 @@
 {% load staticfiles %}
 <link href="{% static 'CityApp/base.css' %}" rel="stylesheet">
 <link href="{% static 'CityApp/info.css' %}" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 {% endblock %}
@@ -21,56 +23,56 @@
   <ul class="list" style="height:100%;overflow:hidden; overflow-y:scroll;">
     <li>
 	<ul class="nav nav-tabs">
-	
-	{% if currentUser.user_type == "Business" %}	
-    <li class="active"><a data-toggle="tab" href="#cityinfo">CityInfo</a></li>	
-    <li><a data-toggle="tab" href="#hotels">Hotels</a></li>	
+
+	{% if currentUser.user_type == "Business" %}
+    <li class="active"><a data-toggle="tab" href="#cityinfo">CityInfo</a></li>
+    <li><a data-toggle="tab" href="#hotels">Hotels</a></li>
     <li><a data-toggle="tab" href="#industry">Industry</a></li>
 	{% endif %}
-	
-	{% if currentUser.user_type == "Tourist" %}	
-    <li class="active"><a data-toggle="tab" href="#cityinfo">CityInfo</a></li>	
-    <li><a data-toggle="tab" href="#hotels">Hotels</a></li>	
+
+	{% if currentUser.user_type == "Tourist" %}
+    <li class="active"><a data-toggle="tab" href="#cityinfo">CityInfo</a></li>
+    <li><a data-toggle="tab" href="#hotels">Hotels</a></li>
 	{% endif %}
-	
-	{% if currentUser.user_type == "Student" %}	
-    <li class="active"><a data-toggle="tab" href="#cityinfo">CityInfo</a></li>	
-    <li><a data-toggle="tab" href="#colleges">Colleges</a></li>	
+
+	{% if currentUser.user_type == "Student" %}
+    <li class="active"><a data-toggle="tab" href="#cityinfo">CityInfo</a></li>
+    <li><a data-toggle="tab" href="#colleges">Colleges</a></li>
     <li><a data-toggle="tab" href="#libraries">Libraries</a></li>
-	{% endif %}	
+
+
+	{% endif %}
   </ul>
-	
-	
-	
-	
-	
-	
-	
-      {% for details in cityInfo %}
-        <li>
 
-          <h3><a href="/CityApp/landmark/{{ details.slug }}">{{details.name}}</a></h3>
-		  <h4>{{ details.landmark_type}} </h4>
-		  {% if details.landmark_type == "Industry"  %}
-		            <p>Industry type: {{details.industry_type}}: </p>
-		  {% endif %}
-		<p>{{ details.user_type}} </p>
-		<p>{{ details.phone_number}} </p>
-		<p>{{ details.email}} </p>
-		<p>Address: {{ details.unit_number}} {{ details.street_number}} {{ details.street_name}} {{ details.suburb}}
-		{{ details.state}} {{ details.postcode}}</p>
-		<p>Long: {{ details.longitude}} </p>
-		<p>Lat: {{ details.latitude}} </p>
+
+  {% for details in cityInfo %}
+     {% if currentUser.user_type == details.user_type or details.user_type == "General" %}
+       <li>
+
+         <h3><a href="/CityApp/landmark/{{ details.slug }}">{{details.name}}</a></h3>
+     <h4>{{ details.landmark_type}} </h4>
+     {% if details.landmark_type == "Industry"  %}
+               <p>Industry type: {{details.industry_type}}: </p>
+     {% endif %}
+   <p>{{ details.user_type}} </p>
+   <p>{{ details.phone_number}} </p>
+   <p>{{ details.email}} </p>
+   <p>Address: {{ details.unit_number}} {{ details.street_number}} {{ details.street_name}} {{ details.suburb}}
+   {{ details.state}} {{ details.postcode}}</p>
+   <p>Long: {{ details.longitude}} </p>
+   <p>Lat: {{ details.latitude}} </p>
 
 
 
 
+   {% endif %}
+       </li>
+     {% endfor %}
 
-        </li>
-      {% endfor %}
 
-    </li>
-  </ul>
+
+</li>
+</ul>
 
   <style>
       #map {
