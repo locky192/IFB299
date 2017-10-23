@@ -18,7 +18,7 @@ class UserProfileForm(forms.ModelForm):
 
 
 class UpdateProfile(forms.ModelForm):
-
+    # password = forms.CharField(widget=forms.PasswordInput())
 
     class Meta:
         model = User
@@ -28,6 +28,21 @@ class UpdateProfile(forms.ModelForm):
     def save(self, commit=True):
         user = super(UpdateProfile, self).save(commit=False)
         user.email = self.cleaned_data['email']
+
+        if commit:
+            user.save()
+
+        return user
+
+class UpdateUserProfile(forms.ModelForm):
+
+    class Meta:
+        model = UserProfile
+        fields = ('phone_number', 'unit_number', 'street_number', 'street_name',
+                          'suburb', 'state', 'postcode', 'user_type')
+
+    def save(self, commit=True):
+        user = super(UpdateUserProfile, self).save(commit=False)
 
         if commit:
             user.save()

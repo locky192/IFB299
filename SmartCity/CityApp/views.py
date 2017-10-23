@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect
-from CityApp.forms import UserForm, UserProfileForm, UpdateProfile
+from CityApp.forms import UserForm, UserProfileForm, UpdateProfile, UpdateUserProfile
 from templates.function import write_func
 from CityApp.models import CityInfo, UserProfile
 from django.shortcuts import render_to_response
@@ -28,17 +28,17 @@ def admin_login(request, template_name):
 
 def info_page(request):
 	userid= request.user.id
-	
+
 	currentUser=UserProfile.objects.get(user_id=userid)
-	
-	
+
+
 	if currentUser.user_type == 'Tourist':
 		hotelInfo= CityInfo.objects.filter(landmark_type='Hotel')
 		cityInfo=CityInfo.objects.filter(Q(landmark_type='Mall') | Q(landmark_type='Park') | Q(landmark_type='Zoo'))
 		cityInfo=cityInfo.order_by('name')
 		context={'context1': cityInfo, 'context2':hotelInfo, 'currentUser':currentUser}
 		return render(request, 'CityApp/infopage.html', context)
-		
+
 	if currentUser.user_type == 'Student':
 		collegeInfo= CityInfo.objects.filter(landmark_type='College')
 		libraryInfo=CityInfo.objects.filter(landmark_type='Library')
@@ -46,7 +46,7 @@ def info_page(request):
 		cityInfo=cityInfo.order_by('name')
 		context={'context1': cityInfo, 'context2':collegeInfo, 'context3': libraryInfo, 'currentUser':currentUser}
 		return render(request, 'CityApp/infopage.html', context)
-		
+
 	if currentUser.user_type == 'Business':
 		hotelInfo= CityInfo.objects.filter(landmark_type='Hotel')
 		industryInfo=CityInfo.objects.filter(landmark_type='Industry')
@@ -54,10 +54,10 @@ def info_page(request):
 		cityInfo=cityInfo.order_by('name')
 		context={'context1': cityInfo, 'context2':hotelInfo, 'context3': industryInfo, 'currentUser':currentUser}
 		return render(request, 'CityApp/infopage.html', context)
-	
-	
+
+
 	context = {'cityInfo':cityInfo, 'currentUser':currentUser, 'libraryInfo': libraryInfo}
-	
+
 	return render(request, 'CityApp/infopage.html', context)
 
 
@@ -94,14 +94,19 @@ def update_profile(request):
 
     if request.method == 'POST':
         form = UpdateProfile(request.POST, instance=request.user)
+        profileform = UpdateUserProfile(request.POST, instance=request.user)
         # form.actual_user = request.user
         if form.is_valid():
+            # form.set_password(user.password)
             form.save()
+            profileform.save()
             return HttpResponseRedirect('/CityApp/')
     else:
         form = UpdateProfile()
+        profileform = UpdateUserProfile()
 
     args['form'] = form
+    args['profileform'] = profileform
     return render(request, 'CityApp/update.html', args)
 
 
