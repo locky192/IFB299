@@ -3,11 +3,12 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
-from django.http import HttpResponse
-from CityApp.forms import UserForm, UserProfileForm
+from django.http import HttpResponse, HttpResponseRedirect
+from CityApp.forms import UserForm, UserProfileForm, UpdateProfile
 from templates.function import write_func
 from CityApp.models import CityInfo, UserProfile
 from django.shortcuts import render_to_response
+
 
 
 # Create your views here.
@@ -28,10 +29,10 @@ def admin_login(request, template_name):
 def info_page(request):
 	userid= request.user.id
 	print(userid)
-	currentUser=UserProfile.objects.get(id=7)	
+	currentUser=UserProfile.objects.get(id=7)
 	cityInfo = CityInfo.objects.all()
 	context = {'cityInfo':cityInfo, 'currentUser':currentUser}
-		
+
 	return render(request, 'CityApp/infopage.html', context)
 
 def library_list(request):
@@ -64,6 +65,23 @@ def button(request):
 def button_function(request):
 	write_func()
 	return render(request, 'CityApp/button.html', {})
+
+
+def update_profile(request):
+    args = {}
+
+    if request.method == 'POST':
+        form = UpdateProfile(request.POST, instance=request.user)
+        # form.actual_user = request.user
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/CityApp/')
+    else:
+        form = UpdateProfile()
+
+    args['form'] = form
+    return render(request, 'CityApp/update.html', args)
+
 
 def register (request):
     registered = False
